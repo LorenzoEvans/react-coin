@@ -1,16 +1,23 @@
 import React from 'react'
-import styled from 'styled-components'
-const NavStyle = styled.nav `
-
-`
-
-const AnchorStyle = styled.a `
-`
+import { NavDiv, NavHeader, NavStyle, AnchorStyle } from './NavStyledComponents'
 
 export default function NavBar() {
   return (
-    <div>
-      
-    </div>
+    <NavDiv>
+      <NavHeader>
+       Coin Pouch.
+      </NavHeader>
+      <NavStyle>
+       <AnchorStyle>
+        Prices
+       </AnchorStyle>
+       <AnchorStyle>
+        Lists 
+       </AnchorStyle>
+       <AnchorStyle>
+        Links 
+        </AnchorStyle>
+      </NavStyle>
+    </NavDiv>
   )
 }
