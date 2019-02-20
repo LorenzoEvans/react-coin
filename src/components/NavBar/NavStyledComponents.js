@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const NavDiv = styled.div `
- position: absolute ;
  display: flex;
  flex-direction: column ;
  width: 100% ;
@@ -20,11 +19,11 @@ text-shadow:
 letter-spacing: 4px ;
 margin-bottom: .5rem ;
 text-shadow: 
-#B0BEC5 0px 0px 5px, 
-#006064 0px 0px 10px, 
-#0D47A1 0px 0px 15px, 
-#1A237E 0px 10px 20px, 
-#424242 0px 0px 30px, 
+#B0BEC5 5px 0px 5px, 
+#006064 5px 0px 10px, 
+#0D47A1 5px 0px 15px, 
+#1A237E 5px 10px 20px, 
+#424242 5px 0px 30px, 
 ${'' /* #FD2D95 0px 0px 40px,  */}
 ${'' /* #FF2D95 0px 0px 50px,  */}
 #FF2D95 0px 0px 75px;
