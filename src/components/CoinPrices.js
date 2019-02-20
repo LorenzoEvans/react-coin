@@ -14,7 +14,7 @@ class CoinPrices extends React.Component {
 
   fetchPrice = () => {  
    axios
-   .get('https://api.coinmarketcap.com/v1/ticker/?limit=10')
+   .get('https://api.coinmarketcap.com/v1/ticker/?limit=20')
    .then(response => {
     this.setState({
      data: response.data,
@@ -26,7 +26,8 @@ class CoinPrices extends React.Component {
    
  componentDidMount() {
  
-   this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
+   // this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
+   this.fetchPrice()
  }
   render () {
    return (

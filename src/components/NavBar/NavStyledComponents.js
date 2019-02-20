@@ -15,7 +15,6 @@ font-family: "Faster One";
 width: 100% ;
 color: #B0BEC5 ;
 margin-left: 20px ;
-text-shadow: 
 letter-spacing: 4px ;
 margin-bottom: .5rem ;
 text-shadow: 
