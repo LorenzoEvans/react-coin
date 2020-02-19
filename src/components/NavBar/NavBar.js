@@ -12,10 +12,13 @@ export default function NavBar() {
         Prices
        </AnchorStyle>
        <AnchorStyle>
-        Lists 
+        Coin Gallery 
        </AnchorStyle>
        <AnchorStyle>
-        Links 
+        Blockchain Data
+        </AnchorStyle>
+        <AnchorStyle>
+          Exchanges
         </AnchorStyle>
       </NavStyle>
     </NavDiv>

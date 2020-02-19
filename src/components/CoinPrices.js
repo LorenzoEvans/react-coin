@@ -14,12 +14,12 @@ class CoinPrices extends React.Component {
 
   fetchPrice = () => {  
    axios
-   .get('https://min-api.cryptocompare.com/data/all/coinlist')
+   .get('https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=100&tsym=USD')
    .then(response => {
      console.log(response)
-    // this.setState({
-    //  data: response.data,
-    // })
+    this.setState({
+     data: response.data.Data,
+    })
    })
    .catch((err) => {
     console.log(err)
@@ -27,10 +27,11 @@ class CoinPrices extends React.Component {
    
  componentDidMount() {
  
-   this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
+  //  this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
    this.fetchPrice()
  }
   render () {
+    console.log(this.state.data)
    return (
    <div>
     {
