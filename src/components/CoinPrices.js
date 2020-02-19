@@ -14,11 +14,12 @@ class CoinPrices extends React.Component {
 
   fetchPrice = () => {  
    axios
-   .get('https://api.coinmarketcap.com/v1/ticker/?limit=20')
+   .get('https://min-api.cryptocompare.com/data/all/coinlist')
    .then(response => {
-    this.setState({
-     data: response.data,
-    })
+     console.log(response)
+    // this.setState({
+    //  data: response.data,
+    // })
    })
    .catch((err) => {
     console.log(err)
@@ -26,25 +27,25 @@ class CoinPrices extends React.Component {
    
  componentDidMount() {
  
-   // this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
+   this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
    this.fetchPrice()
  }
   render () {
    return (
    <div>
     {
-     this.state.data.map((coin, index) => <SingleCoin 
-     key={index}
-     id={coin.id}
-     name={coin.name}
-     price={coin.price}
-     symbol={coin.symbol}
-     rank={coin.rank}
-     price_usd={coin.price_usd}
-     price_btc={coin.price_btc}
-     market_cap_usd={coin.market_cap_usd}
-      />
-     )
+    //  this.state.data.map((coin, index) => <SingleCoin 
+    //  key={index}
+    //  id={coin.id}
+    //  name={coin.name}
+    //  price={coin.price}
+    //  symbol={coin.symbol}
+    //  rank={coin.rank}
+    //  price_usd={coin.price_usd}
+    //  price_btc={coin.price_btc}
+    //  market_cap_usd={coin.market_cap_usd}
+    //   />
+    //  )
     }
    </div>
   )

@@ -10,7 +10,7 @@ export const NavDiv = styled.div `
 
 export const NavHeader = styled.span `
 font-size: 2.8rem;
-font-family: "Faster One";
+font-family: "Cutive Mono";
 width: 100% ;
 color: #B0BEC5 ;
 margin-left: 20px ;
@@ -26,7 +26,7 @@ justify-content: space-around ;
 `
 export const AnchorStyle = styled.a `
 font-size: 1.8rem ;
-font-family: 'Faster One' ;
+font-family: 'Cutive Mono' ;
 color: #B0BEC5 ;
 
 `
