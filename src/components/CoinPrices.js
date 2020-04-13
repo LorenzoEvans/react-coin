@@ -16,8 +16,6 @@ class CoinPrices extends React.Component {
  
  componentDidMount() {
    
-   const exchangeRates;
-   
    Zabo.init({
        clientId: process.env.ZABO_API_KEY,
        env: 'sandbox',
@@ -26,7 +24,7 @@ class CoinPrices extends React.Component {
            this.setState(() => {
              console.log(response)
              return {data: response};
-           }) = response;
+           })
          }).catch((error) => {
            console.log(error.message);
          })
