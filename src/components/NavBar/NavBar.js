@@ -1,12 +1,17 @@
 import React from 'react'
-import { NavDiv, NavHeader, NavStyle, AnchorStyle } from './NavStyledComponents'
+import { NavDiv, NavHeader, NavStyle, AnchorStyle, NavContent, TopLevelNav } from './NavStyledComponents'
 
 export default function NavBar() {
   return (
     <NavDiv>
-      <NavHeader>
-       Coin Pouch.
-      </NavHeader>
+      <TopLevelNav>
+        <NavHeader>
+        Coin Pouch.
+        </NavHeader>
+        <NavContent>
+          Coin Gallery
+        </NavContent>
+      </TopLevelNav>
       <NavStyle>
        <AnchorStyle>
         Prices
