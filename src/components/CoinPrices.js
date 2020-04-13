@@ -1,34 +1,37 @@
 import React from 'react'
 import SingleCoin from './SingleCoin'
 import axios from 'axios'
+import Zabo from 'zabo-sdk-js';
+
 
 class CoinPrices extends React.Component {
  constructor(props){
   super(props)
   this.state = {
-   data : [{
-    volume: ''
-   }]
+   data : []
   }
  }
 
-  fetchPrice = () => {  
-   axios
-   .get('https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=100&tsym=USD')
-   .then(response => {
-     console.log(response)
-    this.setState({
-     data: response.data.Data,
-    })
-   })
-   .catch((err) => {
-    console.log(err)
-   })}
-   
- componentDidMount() {
  
-  //  this.interval = setInterval(() => this.fetchPrice(), 60 * 100)
-   this.fetchPrice()
+ 
+ componentDidMount() {
+   
+   const exchangeRates;
+   
+   Zabo.init({
+       clientId: process.env.ZABO_API_KEY,
+       env: 'sandbox',
+     }).then((zabo) => {
+         zabo.currencies.getExchangeRates().then((response) => {
+           this.setState(() => {
+             console.log(response)
+             return {data: response};
+           }) = response;
+         }).catch((error) => {
+           console.log(error.message);
+         })
+     })
+
  }
   render () {
     console.log(this.state.data)
@@ -37,10 +40,10 @@ class CoinPrices extends React.Component {
     {
     //  this.state.data.map((coin, index) => <SingleCoin 
     //  key={index}
-    //  id={coin.id}
     //  name={coin.name}
-    //  price={coin.price}
-    //  symbol={coin.symbol}
+    //  ticker={coin.ticker}
+    //  decimals={coin.decimals}
+    //  priority={coin.priority}
     //  rank={coin.rank}
     //  price_usd={coin.price_usd}
     //  price_btc={coin.price_btc}
